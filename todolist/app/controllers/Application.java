@@ -47,7 +47,10 @@ public class Application extends Controller {
 			  Task.delete(id);
 			  return redirect(routes.Application.tasks());
 		  }
-		  
+		  public static Result listTask() {
+		        List<Task> users = Task.all();
+		        return ok(Json.toJson(users));
+		} 
 		  
 		 
 		 
