@@ -30,6 +30,10 @@ public class Task extends Model{
   public static void delete(Long id) {
 	  find.ref(id).delete();
   }
+  public static List<Task> findNext(int from, int nb)
+	{
+		return find.setFirstRow(from).setMaxRows(nb).findList();
+	}
   
 
 	
