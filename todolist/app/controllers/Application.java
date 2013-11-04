@@ -48,12 +48,14 @@ public class Application extends Controller {
 			  return redirect(routes.Application.tasks());
 		  }
 		  public static Result listTask() {
-		        List<Task> users = Task.all();
-		        return ok(Json.toJson(users));
+		        List<Task> tasks = Task.all();
+		        return ok(Json.toJson(tasks));
 		} 
 		  
 		 
 		 
+		  
+		  
 		
 
    
