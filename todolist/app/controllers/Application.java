@@ -44,8 +44,10 @@ public class Application extends Controller {
 		  }
 		  
 		  public static Result deleteTask(Long id) {
-		    return TODO;
+			  Task.delete(id);
+			  return redirect(routes.Application.tasks());
 		  }
+		  
 		  
 		 
 		 
